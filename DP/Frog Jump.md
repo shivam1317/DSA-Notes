@@ -6,7 +6,7 @@
 
 If we have an array `[10 20 30 10]` then we have following 3 possibilities.
 
-![](./Attachments/Pasted%20image%2020220502232111.png)
+![](./Attachments/Pastedimage20220502232111.png)
 
 ## Recursive Approach:
 
@@ -40,13 +40,13 @@ Now we just have to find minimum of `singleJump` and `doubleJump` and it will be
 
 Now if we draw recursion tree for Array `[30 10 60 10 60 50]` this then it will look like this:
 
-![[Pasted image 20220503001530.png]]
+![](./Attachments/Pastedimage20220503001530.png)
 
 ## Converting to DP
 
 Here we can see that function calls are overlapping. For example `f(3)` is getting called 2 times. So we can store the answer of f(3) in our dp array and return it directly whenever we got another call for `f(3)` without doing it again.
 
-![[Pasted image 20220503001822.png]]
+![](./Attachments/Pastedimage20220503001822.png)
 
 So we need an array of size of `n+1` and just store the answer before returning it.
 
@@ -109,7 +109,7 @@ return dp[i] = min(singleJump,doubleJump);
 
 --> So first of all let's see the flow of dp array in diagram.
 
-![[Pasted image 20220504174150.png]]
+![](./Attachments/Pastedimage20220504174150.png)
 
 So here we can see that we are just changing `3` values. which are current element, curr-1 and curr-2. so **why don't we add them in variable instead of using an array and just change the variables in each iteration?**
 
