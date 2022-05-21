@@ -118,14 +118,14 @@ Space complexity: O(1)
 
 ## Approach:
 
---> So here they said that the ==First and Last elements are adjacent== so here we can solve the question in 2 ways.
+--> So here they said that the **First and Last elements are adjacent** so here we can solve the question in 2 ways.
 
 ```
 1. Leave the first element and run the previous question logic and find answer
 2. Leave the last element and run the previous question logic and find answer
 ```
 
---> And our final answer will be ==maximum Of these both answers== 
+--> And our final answer will be `maximum Of these both answers` 
 
 ## Code:
 
