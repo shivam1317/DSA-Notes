@@ -1,18 +1,23 @@
 ## Problem:
 
->Given a string you need to print all possible strings that can be made by placing spaces (zero or one) in between them. The output should be printed in **sorted** **increasing** order of strings
+> Given a string you need to print all possible strings that can be made by placing spaces (zero or one) in between them. The output should be printed in **sorted** **increasing** order of strings
 
 ## Example:
 
 **Input**:
+
 ```
 S = "ABC"
 ```
-**Output:** 
+
+**Output:**
+
 ```
 (A B C)(A BC)(AB C)(ABC)
 ```
+
 **Explanation**:
+
 ```
 ABC
 AB C
@@ -25,12 +30,12 @@ These are the possible combination of "ABC".
 
 --> Here we have 2 conditions:
 
-1. Add space 
+1. Add space
 2. Don't add space
 
 So we will simply make 2 recursive call and recursive tree will look like this:
 
-![[Pasted image 20220518225427.png]]
+![](../DP/Attachments/Pastedimage20220518225427.png)
 
 So we will store our temp strings in `temp` variable.
 
@@ -38,7 +43,7 @@ So we will store our temp strings in `temp` variable.
 
 So it will look like this:
 
-![[Pasted image 20220518225826.png]]
+![](../DP/Attachments/Pastedimage20220518225826.png)
 
 So here we can see that we are getting wrong answer so ==we have to do backtracking here== which we can do by just removing the last 2 elements of current `temp` which we will do like this:
 
@@ -76,4 +81,3 @@ void solve(string S,string temp,int i,vector<string>&ans){
         return ans;
     }
 ```
-

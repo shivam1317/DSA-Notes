@@ -1,0 +1,96 @@
+{
+  "main": {
+    "id": "ee15433a6c56f821",
+    "type": "split",
+    "children": [
+      {
+        "id": "ec4d3f2a810245e1",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "DP/Frog Jump.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "250108e43fa22eaf",
+    "type": "split",
+    "children": [
+      {
+        "id": "b1af8ccf8c6b231b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0180f7deda1846db",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "c65c1382223c708d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 170
+  },
+  "right": {
+    "id": "0e7790d487b9e42d",
+    "type": "split",
+    "children": [
+      {
+        "id": "8fc2343ae6884b7b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5ff3a765e266a9c8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "DP/Frog Jump.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "ec4d3f2a810245e1",
+  "lastOpenFiles": [
+    "DP/Frog Jump.md",
+    "GFG/Find pairs with given sum.md",
+    "GFG/Hungry Pizza Lovers.md",
+    "GFG/FarthestElement.md"
+  ]
+}

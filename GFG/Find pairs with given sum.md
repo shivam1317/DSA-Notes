@@ -1,22 +1,27 @@
 ## Problem statement:
 
->Given two unsorted arrays **A** of size **N** and **B** of size **M** of distinct elements, the task is to find all pairs from both arrays whose sum is equal to **X**.
+> Given two unsorted arrays **A** of size **N** and **B** of size **M** of distinct elements, the task is to find all pairs from both arrays whose sum is equal to **X**.
 
 ## Example:
 
 **Input:**
+
 ```
 A[] = {1, 2, 4, 5, 7}
-B[] = {5, 6, 3, 4, 8} 
+B[] = {5, 6, 3, 4, 8}
 X = 9
 ```
+
 **Output:**
+
 ```
 1 8
-4 5 
+4 5
 5 4
 ```
+
 **Explanation:**
+
 ```
 (1, 8), (4, 5), (5, 4) are the
 pairs which sum to 9.
@@ -34,7 +39,7 @@ pairs which sum to 9.
 
 --> So let's first see the digram for our logic.
 
-![[Pasted image 20220508160548.png]]
+![](../DP/Attachments/Pastedimage20220508160548.png)
 
 --> Now ==if `A[i]+B[j]` is less than X then we will increase the i== because if we decrease j then it's gonna be lower because we have already started from right side.
 
@@ -66,4 +71,3 @@ vector<pair<int,int>> allPairs(int A[], int B[], int N, int M, int X)
         return ans;
     }
 ```
-

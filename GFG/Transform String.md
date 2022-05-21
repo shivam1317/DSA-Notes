@@ -1,19 +1,24 @@
-## Problem 
+## Problem
 
->Given two strings A and B. Find the minimum number of steps required to transform string A into string B. The only allowed operation for the transformation is selecting a character from string A and inserting it in the beginning of string A.
+> Given two strings A and B. Find the minimum number of steps required to transform string A into string B. The only allowed operation for the transformation is selecting a character from string A and inserting it in the beginning of string A.
 
 ## Example
 
 **Input:**
+
 ```
 A = "abd"
 B = "bad"
 ```
-**Output:** 
+
+**Output:**
+
 ```
 1
 ```
-**Explanation:** 
+
+**Explanation:**
+
 ```
 The conversion can take place in
 1 operation: Pick 'b' and place it at the front.
@@ -30,7 +35,7 @@ For example we have 2 pointers `i` and `j` and now we have 2 conditions here:
 
 we could start from `0` then we have to increase `j` if both elements are not equal and if both are equal then increase both i and j. But this logic gives wrong answer which we can see in below image.
 
-![[Pasted image 20220519231150.png]]
+![](../DP/Attachments/Pastedimage20220519231150.png)
 
 So that's why we have to start i and j from `n-1`
 

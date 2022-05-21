@@ -1,19 +1,19 @@
 ## Problem Statement:
 
->Geek town has N Houses numbered from 1 to N. They are connected with each other via N-1 bidirectional roads and an adjacency list is used to represent the connections. To host the optimal party, you need to identify the house from which the distance to the farthest house is minimum. Find this distance.
+> Geek town has N Houses numbered from 1 to N. They are connected with each other via N-1 bidirectional roads and an adjacency list is used to represent the connections. To host the optimal party, you need to identify the house from which the distance to the farthest house is minimum. Find this distance.
 
 ### Example:
 
-**Input:** 
+**Input:**
 N = 4
-Roads = {{1,2},{2,3},{2,4}} 
-adj = {{2},{1,3,4},{2},{2}} 
+Roads = {{1,2},{2,3},{2,4}}
+adj = {{2},{1,3,4},{2},{2}}
 
 **Output:** 1
 
-**Explaination:** 
+**Explaination:**
 ![](https://media.geeksforgeeks.org/img-practice/ScreenShot2022-05-02at4-1651489722.png)
-Party should take place at house number 2. 
+Party should take place at house number 2.
 Maximum distance from house number 2 is 1.
 
 ## Dry run:
@@ -22,7 +22,7 @@ Maximum distance from house number 2 is 1.
 
 For example:
 
-![[Pasted image 20220502170828.png]]
+![](./Attachments/Pastedimage20220502170828.png)
 
 In this graph the longest path length for `1` will be `3` which is `1->2->3->5`
 
@@ -95,5 +95,3 @@ at last we will return `ans`
         return ans;
     }
 ```
-
-

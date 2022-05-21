@@ -1,16 +1,16 @@
 ## Problem statement
 
->Given a ‘N’ * ’M’ maze with obstacles, count and return the number of paths to reach the right-bottom cell from the top-left cell. A cell in the given maze has a value -1 if it is a blockage or dead-end, else 0. From a given cell, we are allowed to move to cells (i+1, j) and (i, j+1) only. Since the answer can be large, print it modulo 10^9 + 7.
+> Given a ‘N’ \* ’M’ maze with obstacles, count and return the number of paths to reach the right-bottom cell from the top-left cell. A cell in the given maze has a value -1 if it is a blockage or dead-end, else 0. From a given cell, we are allowed to move to cells (i+1, j) and (i, j+1) only. Since the answer can be large, print it modulo 10^9 + 7.
 
 ## Example :
 
 ```
 Consider the maze below :
-0 0 0 
-0 -1 0 
+0 0 0
+0 -1 0
 0 0 0
 
-There are two ways to reach the bottom left corner - 
+There are two ways to reach the bottom left corner -
 
 (1, 1) -> (1, 2) -> (1, 3) -> (2, 3) -> (3, 3)
 (1, 1) -> (2, 1) -> (3, 1) -> (3, 2) -> (3, 3)
@@ -20,7 +20,7 @@ Hence the answer for the above test case is 2.
 
 --> Diagram:
 
-![[Pasted image 20220509163801.png]]
+![](./Attachments/Pastedimage20220509163801.png)
 
 ## Approach:
 

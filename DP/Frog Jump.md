@@ -1,12 +1,12 @@
 ## Problem statement:
 
->In this problem there is a one frog and it wants to reach the Nth stair starting from 1st stair. Frog can jump ==only 1 or 2 stairs== at a time and the jump costs a[i]-a[j] where i is the starting index of jump and j is ending point of jump. Your task is to find the mimimum enegery in which frog can reach N.
+> In this problem there is a one frog and it wants to reach the Nth stair starting from 1st stair. Frog can jump ==only 1 or 2 stairs== at a time and the jump costs a[i]-a[j] where i is the starting index of jump and j is ending point of jump. Your task is to find the mimimum enegery in which frog can reach N.
 
 ### Example:
 
 If we have an array `[10 20 30 10]` then we have following 3 possibilities.
 
-![[Pasted image 20220502232111.png]]
+![](./Attachments/Pasted%20image%2020220502232111.png)
 
 ## Recursive Approach:
 
@@ -14,7 +14,7 @@ If we have an array `[10 20 30 10]` then we have following 3 possibilities.
 
 So our code for finding all possibilities will be like this :
 
->Note:We will start from right side means from last index and go till 0th index.
+> Note:We will start from right side means from last index and go till 0th index.
 
 ```cpp
 int singleJump = solve(arr[n-1]) + abs(arr[ind]-arr[ind-1]); // Adding cost for single jump
@@ -77,7 +77,7 @@ int frogJump(int n,vector<int>&arr){
 
 ## Converting to tabulation
 
---> So we have done memoization which is top-down method. Now we will convert this in tabulation which is bottom-up in which we start from `0` and go till `n-1` 
+--> So we have done memoization which is top-down method. Now we will convert this in tabulation which is bottom-up in which we start from `0` and go till `n-1`
 
 So here first we will initialise our dp array with `0` because we are gonna add everything in dp array now.
 
@@ -116,6 +116,7 @@ So here we can see that we are just changing `3` values. which are current eleme
 So let's suppose we will store current i in `curr` variable, i-1 in `prev` and i-2 in `prev2` variable.
 
 So our code will look like this:
+
 ```cpp
 int prev = 0,prev2=0,curr=0;
 for(int i=1 -> n-1){
@@ -127,7 +128,7 @@ for(int i=1 -> n-1){
 	curr = min(singleJump,doubleJump);
 	prev2 = prev;
 	prev = curr;
-} 
+}
 return prev; // curr will be n and prev will be n-1 and prev2 will be n-2 so we need answer for n-1 which is last index that's why we are returning prev
 ```
 
@@ -179,4 +180,3 @@ solve(int idx){
 Time complexity: O(n*k)
 Space complexity: O(N)
 ```
-

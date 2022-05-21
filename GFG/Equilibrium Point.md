@@ -1,25 +1,30 @@
 ## Problem statement
 
->Given an array A of n positive numbers. The task is to find the first Equilibium Point in the array.   
-Equilibrium Point in an array is a position such that the sum of elements before it is equal to the sum of elements after it.
-**Note: Retun the index of Equilibrium point. (1-based index)**
+> Given an array A of n positive numbers. The task is to find the first Equilibium Point in the array.   
+> Equilibrium Point in an array is a position such that the sum of elements before it is equal to the sum of elements after it.
+> **Note: Retun the index of Equilibrium point. (1-based index)**
 
 ## Example:
 
-Input: 
+Input:
+
 ```
-n = 5 
-A[] = {1,3,5,2,2} 
+n = 5
+A[] = {1,3,5,2,2}
 ```
+
 Output:
+
 ```
-3 
+3
 ```
+
 Explanation:
+
 ```
-For second test case 
-equilibrium point is at position 3 
-as elements before it (1+3) = 
+For second test case
+equilibrium point is at position 3
+as elements before it (1+3) =
 elements after it (2+2).
 ```
 
@@ -29,7 +34,7 @@ elements after it (2+2).
 
 So the process will look like this:
 
-![[Pasted image 20220505151533.png]]
+![](../DP/Attachments/Pastedimage20220505151533.png)
 
 Now why we are subtracting elements from our sum?
 
@@ -39,8 +44,8 @@ So final code will look like this:
 
 ```cpp
 int equilibriumPoint(long long a[], int n) {
-    
-        if(n==1){ 
+
+        if(n==1){
             return 1;
         }
         long long prefixsum = 0;
@@ -58,5 +63,3 @@ int equilibriumPoint(long long a[], int n) {
         return -1;
    }
 ```
-
-

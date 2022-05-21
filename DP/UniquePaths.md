@@ -1,14 +1,14 @@
 ## Problem:
 
->You are present at point ‘A’ which is the top-left cell of an M X N matrix, your destination is point ‘B’, which is the bottom-right cell of the same matrix. Your task is to find the total number of unique paths from point ‘A’ to point ‘B’.In other words, you will be given the dimensions of the matrix as integers ‘M’ and ‘N’, your task is to find the total number of unique paths from the cell MATRIX[0][0] to MATRIX['M' - 1]['N' - 1].
- To traverse in the matrix, you can either move Right or Down at each step. For example in a given point MATRIX[i] [j], you can move to either MATRIX[i + 1][j] or MATRIX[i][j + 1].
- 
+> You are present at point ‘A’ which is the top-left cell of an M X N matrix, your destination is point ‘B’, which is the bottom-right cell of the same matrix. Your task is to find the total number of unique paths from point ‘A’ to point ‘B’.In other words, you will be given the dimensions of the matrix as integers ‘M’ and ‘N’, your task is to find the total number of unique paths from the cell MATRIX[0][0] to MATRIX['M' - 1]['n' - 1].
+> To traverse in the matrix, you can either move Right or Down at each step. For example in a given point MATRIX[i] [j], you can move to either MATRIX[i + 1][j] or MATRIX[i][j + 1].
+
 ## Example:
 
 Input:
 
 ```
-2 2 
+2 2
 ```
 
 Output:
@@ -19,7 +19,7 @@ Output:
 
 Explaination:
 
-![[Pasted image 20220506232809.png]]
+![](./Attachments/Pastedimage20220506232809.png)
 
 ## Approach:
 
@@ -47,6 +47,7 @@ if(i<0 || j<0){
 --> Now here we are starting from bottom right so here we have to go ==up and left== which is completely opposite direction of given in question.
 
 So we will go in both directions and return the sum of them.
+
 ```cpp
 int up = solve(i-1,j);
 int down = solve(i,j-1);
@@ -118,4 +119,3 @@ int solve(int n,int m){
 Time Complexity: O(n*m);
 Space complexity: O(n*m);
 ```
-

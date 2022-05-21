@@ -1,22 +1,24 @@
 ## Problem statement:
 
->Ninja is planing this ‘N’ days-long training schedule. Each day, he can perform any one of these three activities. (Running, Fighting Practice or Learning New Moves). Each activity has some merit points on each day. As Ninja has to improve all his skills, he can’t do the same activity in two consecutive days. Can you help Ninja find out the maximum merit points Ninja can earn?
- You are given a 2D array of size N*3 ‘POINTS’ with the points corresponding to each day and activity. Your task is to calculate the maximum number of merit points that Ninja can earn.
-
+> Ninja is planing this ‘N’ days-long training schedule. Each day, he can perform any one of these three activities. (Running, Fighting Practice or Learning New Moves). Each activity has some merit points on each day. As Ninja has to improve all his skills, he can’t do the same activity in two consecutive days. Can you help Ninja find out the maximum merit points Ninja can earn?
+> You are given a 2D array of size N\*3 ‘POINTS’ with the points corresponding to each day and activity. Your task is to calculate the maximum number of merit points that Ninja can earn.
 
 ## Example:
- 
+
 Input
+
 ```
 [[10,50,3],[2,100,5]]
 ```
- 
+
 Output
+
 ```
 110
 ```
- 
+
 ## Approach:
+
 --> So here if we thing greediely and take `50` points at first day then we can't take `100` on second day because as question says ==we can't do same activity on consecutive days== so the max answer will be `55` but the correct answer is `110` which is `10+100` so here we have to try all possible ways which we can do with ==recursion==
 
 --> Here in function, we will need 2 things: 1)Current day and 2) The last activity done so that we can avoid doing same activity on consecutive days.
@@ -40,7 +42,7 @@ solve(dayIdx,prevtaskIdx){
 			}
 		}
 		return maxi;
-	}		
+	}
 }
 ```
 
@@ -70,11 +72,11 @@ And our recursion code is done!
 
 --> The recursion tree will look like this:
 
-![[Pasted image 20220506182348.png]]
+![](./Attachments/Pastedimage20220506182348.png)
 
 --> So here we can see some repetitive function calls like this:
 
-![[Pasted image 20220506182617.png]]
+![](./Attachments/Pastedimage20220506182617.png)
 
 That's why we can use DP here.
 
@@ -171,4 +173,3 @@ int ninjaTraining(int n, vector<vector<int>> &points)
 Time complexity: O(n*4*3)
 Space complexity: O(4)
 ```
-

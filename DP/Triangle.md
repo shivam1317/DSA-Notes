@@ -1,9 +1,9 @@
 ## Problem statement:
 
->You are given a triangular array/list 'TRIANGLE'. Your task is to return the minimum path sum to reach from the top to the bottom row.
- The triangle array will have N rows and the i-th row, where 0 <= i < N will have i + 1 elements.
- You can move only to the adjacent number of row below each step. For example, if you are at index j in row i, then you can move to i or i + 1 index in row j + 1 in each step.
- 
+> You are given a triangular array/list 'TRIANGLE'. Your task is to return the minimum path sum to reach from the top to the bottom row.
+> The triangle array will have N rows and the i-th row, where 0 <= i < N will have i + 1 elements.
+> You can move only to the adjacent number of row below each step. For example, if you are at index j in row i, then you can move to i or i + 1 index in row j + 1 in each step.
+
 ## Example:
 
 ```
@@ -27,7 +27,7 @@ So we will find all possible paths and take their minimum sum. And all possibili
 
 --> we can't start because in the matrix questions we knew that we have to reacth the end of the matrix and the destination was fixed. but here we don't have fixed destination which we can see in diagram:
 
-![[Pasted image 20220521154756.png]]
+![](./Attachments/Pastedimage20220521154756.png)
 
 --> So that's why we will start from ==(0,0)== and go till n-1 th index.
 
@@ -91,13 +91,13 @@ for(int j=0;j<n;j++){
 }
 ```
 
---> Now we will run our loop. So ==i will go from n-2 to 0== 
+--> Now we will run our loop. So ==i will go from n-2 to 0==
 
 ### What will be value for j?
 
 --> So here we can see that for each i the value of column is `i+1` so we just have to run j loop i+1 times from `i to 0`
 
-![[Pasted image 20220521162300.png]]
+![](./Attachments/Pastedimage20220521162300.png)
 
 ```cpp
 // we are starting from n-2 because we have considered n-1th row in base case
@@ -146,11 +146,11 @@ Space complexity: O(NxN) // dp matrix space
 
 we can see the iterations in below diagram:
 
-![[Pasted image 20220521164234.png]]
+![](./Attachments/Pastedimage20220521164234.png)
 
-![[Pasted image 20220521164317.png]]
+![](./Attachments/Pastedimage20220521164317.png)
 
-![[Pasted image 20220521164346.png]]
+![](./Attachments/Pastedimage20220521164346.png)
 
 ## Code
 
@@ -182,4 +182,3 @@ int main(){
 Time complexity: O(NxN)
 Space complexity: O(N)
 ```
-
