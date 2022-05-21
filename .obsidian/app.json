@@ -1,3 +1,6 @@
 {
-  "useMarkdownLinks": true
+  "useMarkdownLinks": true,
+  "attachmentFolderPath": "GFG/Attachments",
+  "newLinkFormat": "relative",
+  "promptDelete": false
 }

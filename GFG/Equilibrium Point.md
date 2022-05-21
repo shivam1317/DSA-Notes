@@ -63,3 +63,4 @@ int equilibriumPoint(long long a[], int n) {
         return -1;
    }
 ```
+

@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "DP/Frog Jump.md",
-            "mode": "source"
+            "file": "DP/MaxPathSum(SelectAnyStartEnd).md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DP/Frog Jump.md",
+                "file": "DP/MaxPathSum(SelectAnyStartEnd).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,9 +88,15 @@
   },
   "active": "ec4d3f2a810245e1",
   "lastOpenFiles": [
+    "DP/MaxPathSum(SelectAnyStartEnd).md",
     "DP/Frog Jump.md",
+    "GFG/Attachments/Pastedimage20220502170828.png",
+    "GFG/Attachments/Pasted image 20220521191945.png",
+    "GFG/Attachments/Pasted image 20220521191956.png",
+    "DP/MinPathSum.md",
+    "GFG/Equilibrium Point.md",
+    "README.md",
     "GFG/Find pairs with given sum.md",
-    "GFG/Hungry Pizza Lovers.md",
-    "GFG/FarthestElement.md"
+    "GFG/Hungry Pizza Lovers.md"
   ]
 }
