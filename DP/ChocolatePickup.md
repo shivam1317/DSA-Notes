@@ -62,3 +62,188 @@ if(i == n-1){
 }
 ```
 
+## Recursive Code:
+
+--> Now we will move alice and bob simultaneously so that means they will move together in the grid. So for `Alice's` one movement there are 3 movement of bob:
+1. left diagonal
+2. down
+3. right diagonal
+
+And also alice have 3 movements as same as bob so total movements will be `9`
+
+we can write it like this:
+
+```cpp
+for(int d1=-1;d1<=1;d1++){
+	for(int d2=-1;d2<=1;d2++){
+		// i will be same for both and both will go down
+		solve(i+1,j1+d1,j2+d2);
+	}
+}
+```
+
+--> Now if alice and bob both are at same cell then we will consider the cell value only once otherwise we will take sum of both `a[i][j1]` and `a[i][j2]`
+
+```cpp
+int maxi = 0;
+for(int d1=-1;d1<=1;d1++){
+	for(int d2=-1;d2<=1;d2++){
+		if(j1 == j2){
+			maxi = max(maxi,arr[i][j1] + solve(i+1,j1+d1,j2+d2));
+		}else{
+			maxi = max(maxi,arr[i][j1] + arr[i][j2] + solve(i+1,j1+d1,j2+d2));
+		}
+	}
+}
+return maxi;
+```
+
+## Complexity:
+
+```
+Time complexity: O(3^n * 3^n)
+Space complexity: O(n)
+```
+
+## Memoization
+
+--> Here we will make 3D matrix of `NxMxM` called `dp[N][M][M]`
+
+Code will look like this:
+
+```cpp
+int solve(int i,int j1,int j2,vector<vector<int>>&arr,vector<vector<vector<int>>>&dp){
+
+	if(j1 < 0 || j1 >= m || j2 < 0 || j2 >= m){
+		return -1e8;
+	}
+	if(i == n-1){
+		if(j1 == j2){
+			return arr[i][j1];
+		}
+		return arr[i][j1] + arr[i][j2];
+	}
+	if(dp[i][j1][j2] != -1){
+		return dp[i][j1][j2];
+	}
+	int maxi = 0;
+	for(int d1=-1;d1<=1;d1++){
+		for(int d2=-1;d2<=1;d2++){
+			if(j1 == j2){
+				maxi = max(maxi,arr[i][j1] + solve(i+1,j1+d1,j2+d2,arr,dp));
+			}else{
+				maxi = max(maxi,arr[i][j1] + arr[i][j2] + solve(i+1,j1+d1,j2+d2,arr,dp));
+			}
+		}
+	}
+	return dp[i][j1][j2] = maxi;
+}
+
+int main(){
+	vector<vector<vector<int>>>dp(N,vector<vector<int>>(M,vector<int>(M,-1)));
+	solve(0,0,m-1);
+}
+```
+
+## Complexity:
+
+```
+Time complexity: O(NxMxM)*9
+Space complexity: O(NxMxM) + O(N)
+```
+
+## Tabulation Code
+
+--> In tabulation, we will start from last row and go till `0`
+
+So if we are at n-1th row then alice and bob can finish at any cell and also they can finish at same cell too so we have to write base case like this:
+
+```cpp
+// Base case
+for(int j1=0;j1<m;j1++){
+	for(int j2=0;j2<m;j2++){
+		if(j1 == j2){
+			dp[n-1][j1][j2] = arr[n-1][j1];
+		}
+		else{
+			dp[n-1][j1][j2] = arr[n-1][j1] + arr[n-1][j2];
+		}
+	}
+}
+```
+
+--> Now i will run from `n-2 to 0` and j1 and j2 run from `0 to m-1`
+
+```cpp
+for(int i=n-2;i>=0;i--){
+	for(int j1=0;j1<m;j1++){
+		for(int j2=0;j2<m;j2++){
+			int maxi = -1e8;
+			for(int d1=-1;d1<=1;d1++){
+				for(int d2=-1;d2<=1;d2++){
+					int value = 0;
+					if(j1 == j2){
+						value = arr[i][j1];
+					}else{
+						maxi = arr[i][j1] + arr[i][j2];
+					}
+					if(j1+d1 >= 0 && j1+d1 < m && j2+d2>=0 && j2+d2 < m){
+						value += dp[i+1][j1+d1][j2+d2];
+					}else{
+						value += -1e8;
+					}
+					maxi = max(maxi,value);
+				}
+			}
+			dp[i][j1][j2] = maxi;
+		}
+	}
+}
+return dp[0][0][m-1];
+```
+
+## Space optimisation :
+
+--> Here we will use a 2D `curr` and `prev` array instead of storing whole matrix in DP array.
+
+```cpp
+int maximumChocolates(int r, int c, vector<vector<int>> &grid) {
+    vector<vector<int>>prev(c,vector<int>(c));
+	vector<vector<int>>curr(c,vector<int>(c));
+	for(int j1=0;j1<c;j1++){
+		for(int j2=0;j2<c;j2++){
+			if(j1 == j2){
+				prev[j1][j2] = grid[r-1][j1];
+			}
+			else{
+				prev[j1][j2] = grid[r-1][j1] + grid[r-1][j2];
+			}
+		}
+	}
+	for(int i=r-2;i>=0;i--){
+		for(int j1=0;j1<c;j1++){
+			for(int j2=0;j2<c;j2++){
+				int maxi = -1e8;
+				for(int d1 = -1;d1<=1;d1++){
+					for(int d2=-1;d2<=1;d2++){
+						int value = 0;
+						if(j1 == j2){
+							value = grid[i][j1];
+						}else{
+							value = grid[i][j1] + grid[i][j2];
+						}
+						if(j1+d1 >= 0 && j1+d1 < c && j2+d2 >= 0 && j2+d2 < c){
+							value += prev[j1+d1][j2+d2];
+						}
+						maxi = max(maxi,value);
+					}
+				}
+				curr[j1][j2] = maxi;
+			}
+		}
+		prev = curr;
+	}
+	return prev[0][c-1];
+}
+```
+
