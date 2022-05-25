@@ -12,6 +12,7 @@ For example, let’s say the given array is [2, 3, 3, 3, 4, 5], then the array c
 
 --> Here we have to divide the array in `exact 2 subsets` and we have to make their sum equal so if whole array sum is `s` then the both subsets will have `s/2` sum so `we just have to find one subarray with sum s/2` because if we find one subset with sum s/2 then other subset will automatically have sum s/2 and we will return `true`
 
+
 ## Code:
 
 ```cpp

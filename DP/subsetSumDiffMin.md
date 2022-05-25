@@ -105,3 +105,16 @@ int minSubsetSumDifference(vector<int>& arr, int n)
     return mini;
 }
 ```
+
+## Complexity:
+
+```
+Time complexity: O(N) + O(Nxtarget) + O(target/2)
+Space complexity: O(Nxtarget)
+```
+
+Note:
+
+>you can also use the space optmised version of subsetProblem to optimise the space complexity to O(target)
+
+
