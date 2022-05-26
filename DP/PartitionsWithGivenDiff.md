@@ -149,6 +149,7 @@ int solve(int tar,vector<int>&arr){
 			}
 			curr[target] = notPick + pick;
 		}
+		prev = curr;
 	}
 	return prev[tar];
 }
