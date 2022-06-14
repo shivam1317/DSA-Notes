@@ -66,7 +66,7 @@ So if we reach `0` then we will simply return the element at first row for curre
 
 ```cpp
 if(i == 0){
-	return arr[n-1][0];
+	return arr[0][j];
 }
 ```
 
