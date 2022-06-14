@@ -127,7 +127,6 @@ Space comeplexity: O(NxM) + O(N+M)
 So final tabulation code will look like this:
 
 ```cpp
-if(i == 0 || j == 0){
 	// Making dp array
 	vector<vector<int>>dp(s1.size()+1,vector<int>(s2.size()+1,0));
 	// for i==0
