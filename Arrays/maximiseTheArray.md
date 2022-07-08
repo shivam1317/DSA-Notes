@@ -1,7 +1,7 @@
 ## Problem:
 
->Given two integer arrays Arr1 and Arr2 of size N. Use the greatest elements from the given arrays to create a new array of size N such that it consists of only unique elements and the sum of all its elements is maximum.  
-The created elements should contain the elements of Arr2 followed by elements of Arr1 in order of their appearance.
+> Given two integer arrays Arr1 and Arr2 of size N. Use the greatest elements from the given arrays to create a new array of size N such that it consists of only unique elements and the sum of all its elements is maximum.  
+> The created elements should contain the elements of Arr2 followed by elements of Arr1 in order of their appearance.
 
 ## Example:
 
@@ -20,6 +20,7 @@ Output:
 ```
 
 Explaination:
+
 ```
 9, 7, 6 are from 2nd array
 and 4, 8 from 1st array.
@@ -27,7 +28,7 @@ and 4, 8 from 1st array.
 
 ## Approach:
 
---> here first we will add all elements in ==set== and then traverse the set from the backwards because it will be sorted so last elements will be big. So we will mark them taken as `True` and also we will make one `count` variable because we will only mark `n` variables from last as taken.
+--> here first we will add all elements in `set` and then traverse the set from the backwards because it will be sorted so last elements will be big. So we will mark them taken as `True` and also we will make one `count` variable because we will only mark `n` variables from last as taken.
 
 Code will look like this:
 

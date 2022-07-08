@@ -22,7 +22,7 @@ Maximum distance from house number 2 is 1.
 
 For example:
 
-![](./Attachments/Pastedimage20220502170828.png)
+![](../GFG/Attachments/Pastedimage20220502170828.png)
 
 In this graph the longest path length for `1` will be `3` which is `1->2->3->5`
 

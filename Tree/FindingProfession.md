@@ -1,4 +1,4 @@
-## Problem: 
+## Problem:
 
 ```
 Consider a special family of **Engineers** and **Doctors** with following rules :
@@ -10,19 +10,24 @@ Consider a special family of **Engineers** and **Doctors** with following ru
 
 We can represent the situation using below diagram:
 
-![](Attachments/Pasted%20image%2020220624153857.png)
+![](../GFG/Attachments/Pasted%20image%2020220624153857.png)
 
 ## Example:
 
-**Input:** 
+**Input:**
+
 ```
 level = 4, pos = 2
 ```
-**Output:** 
+
+**Output:**
+
 ```
 Doctor
 ```
-**Explaination:** 
+
+**Explaination:**
+
 ```
 It is shown in the tree given in question.
 ```
@@ -64,4 +69,3 @@ char profession(int level, int pos){
         }
     }
 ```
-

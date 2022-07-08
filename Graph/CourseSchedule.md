@@ -1,21 +1,26 @@
 ## Problem:
 
->There are a total of **n** tasks you have to pick, labeled from 0 to n-1. Some tasks may have **prerequisites** tasks, for example to pick task 0 you have to first finish tasks 1, which is expressed as a pair: [0, 1]  
-Given the total number of **n** tasks and a list of prerequisite pairs of size **m**. Find a ordering of tasks you should pick to finish all tasks.  
-**Note:** There may be multiple correct orders, you just need to return one of them. If it is impossible to finish all tasks, return an empty array. Returning any correct order will give the output as **1**, whereas any invalid order will give the output **0.**
+> There are a total of **n** tasks you have to pick, labeled from 0 to n-1. Some tasks may have **prerequisites** tasks, for example to pick task 0 you have to first finish tasks 1, which is expressed as a pair: [0, 1]  
+> Given the total number of **n** tasks and a list of prerequisite pairs of size **m**. Find a ordering of tasks you should pick to finish all tasks.  
+> **Note:** There may be multiple correct orders, you just need to return one of them. If it is impossible to finish all tasks, return an empty array. Returning any correct order will give the output as **1**, whereas any invalid order will give the output **0.**
 
 ## Example:
 
 **Input:**
+
 ```
 n = 2, m = 1
 prerequisites = {{1, 0}}
 ```
+
 **Output:**
+
 ```
 1
 ```
+
 **Explanation:**
+
 ```
 The output 1 denotes that the order is valid. So, if you have, implemented your function correctly, then output would be 1 for all test cases.
 One possible order is [0, 1].
@@ -25,7 +30,7 @@ One possible order is [0, 1].
 
 --> Now if we make a graph for this question then it will look like this:
 
-![](Attachments/Pasted%20image%2020220523144615.png)
+![](../GFG/ttachments/Pasted%20image%2020220523144615.png)
 
 So here if we `transpose` the graph then we will get `0` first because we will start with `0` and it can be our ans. So here we just have to find `toposort for directed graph` which we can do using `bfs` and `dfs` but we will do it using `bfs` here.
 
@@ -44,7 +49,7 @@ vector<vector<int>>make_graph(int n,int m,vector<vector<int>>&prerequisites){
         }
         return adj;
     }
-    vector<int> findOrder(int n, int m, vector<vector<int>> prerequisites) 
+    vector<int> findOrder(int n, int m, vector<vector<int>> prerequisites)
     {
        vector<vector<int>> adj = make_graph(n,m,prerequisites);
       vector<int>ans;

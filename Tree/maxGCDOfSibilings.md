@@ -1,21 +1,26 @@
 ## Problem:
 
->Given a 2d list that represents the nodes of a [Binary tree](https://www.geeksforgeeks.org/binary-tree-data-structure/) with **N** nodes, the task is to find the maximum [GCD](https://www.geeksforgeeks.org/c-program-find-gcd-hcf-two-numbers/) of the siblings of this tree without actually constructing it.  
-**Note:** If there are no pairs of siblings in the given tree, print 0. Also, if given that there's an edge between a and b in the form of {a,b} in the list, then a is the parent node.
+> Given a 2d list that represents the nodes of a [Binary tree](https://www.geeksforgeeks.org/binary-tree-data-structure/) with **N** nodes, the task is to find the maximum [GCD](https://www.geeksforgeeks.org/c-program-find-gcd-hcf-two-numbers/) of the siblings of this tree without actually constructing it.  
+> **Note:** If there are no pairs of siblings in the given tree, print 0. Also, if given that there's an edge between a and b in the form of {a,b} in the list, then a is the parent node.
 
 ## Example:
 
 **Input:**
+
 ```
 N = 7
 arr = {{4, 5}, {4, 2}, {2, 3}, {2, 1}, {3, 6}, {3, 12}}
 ```
+
 **Output:**
+
 ```
 6
 ```
+
 **Explanation:**
-![](Attachments/Pasted%20image%2020220525175202.png)
+![](../GFG/Attachments/Pasted%20image%2020220525175202.png)
+
 ```
 For the above tree, the maximum GCD for the sibilings is 6, formed for the nodes 6 and 12 for the children of node 3.
 ```

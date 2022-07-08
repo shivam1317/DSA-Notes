@@ -1,20 +1,25 @@
 ## Problem:
 
->N children are made to stand in a queue. Each of them is given a number A[i]. The teacher writes a number S on a page and passes it to the first child. Each child must add all the numbers they see on the page along with their own number, write the sum on the paper and pass it to the next person.
-In the end, the teacher must determine if X can be formed by adding some of the numbers from the series of numbers written on the paper.
+> N children are made to stand in a queue. Each of them is given a number A[i]. The teacher writes a number S on a page and passes it to the first child. Each child must add all the numbers they see on the page along with their own number, write the sum on the paper and pass it to the next person.
+> In the end, the teacher must determine if X can be formed by adding some of the numbers from the series of numbers written on the paper.
 
 ## Example:
 
-**Input:** 
+**Input:**
+
 ```
 S = 1, N = 4, X = 7
 A = {1, 2, 4, 2}
 ```
-**Output:** 
+
+**Output:**
+
 ```
 yes
 ```
-**Explaination:** 
+
+**Explaination:**
+
 ```
 The final sequence of numbers on the paper is 1, 2, 5, 12, 22. Using 2 and 5 we can form 7.
 ```
@@ -41,6 +46,7 @@ int isPossible(long long S, long long N, long long X, long long A[])
         vector<long long>temp;
         temp.push_back(S);
         int i = 0;
+        // adding values to temp array
         for(;i<N;i++){
             temp.push_back(prefix+A[i]);
             prefix += temp[i+1];

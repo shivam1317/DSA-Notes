@@ -1,34 +1,38 @@
 ## Problem:
 
->The minions are very elitist in nature. If minion x admires minion y, then y thinks too highly of himself and does not admire x back. Also, if x admires y, x also admires everyone that y admires.  
-All the minions are going to be present at the Villain Con. They want to make sure that they do not dress in the same color as someone who admires them.   
-There are **N** minions and **M** relations between them. The relations are given in a 2D array **mat**. Each relation is given in xi , yi format where yi admires xi. Find the minimum number of different colours that the minions will be dressing in.
+> The minions are very elitist in nature. If minion x admires minion y, then y thinks too highly of himself and does not admire x back. Also, if x admires y, x also admires everyone that y admires.  
+> All the minions are going to be present at the Villain Con. They want to make sure that they do not dress in the same color as someone who admires them.   
+> There are **N** minions and **M** relations between them. The relations are given in a 2D array **mat**. Each relation is given in xi , yi format where yi admires xi. Find the minimum number of different colours that the minions will be dressing in.
 
 ## Example:
 
-**Input:** 
+**Input:**
+
 ```
 N = 5, M = 6
-mat = {{1, 3}, 
-       {2, 3}, 
-       {3, 4}, 
-       {1, 4}, 
-       {2, 5}, 
+mat = {{1, 3},
+       {2, 3},
+       {3, 4},
+       {1, 4},
+       {2, 5},
        {3, 5}}
 ```
 
-**Output:** 
+**Output:**
+
 ```
 3
 ```
+
 **Explaination:**
+
 ```
 If we assign red colour to 1 and 2, green colour to 3, and blue colour to 4 and 5, then every minion will have different coloured dresses from the one who admires them.
 ```
 
 **Diagram:**
 
-![](Attachments/Pasted%20image%2020220604144017.png)
+![](../GFG/Attachments/Pasted%20image%2020220604144017.png)
 
 ## Approach:
 
@@ -36,7 +40,7 @@ If we assign red colour to 1 and 2, green colour to 3, and blue colour to 4 and 
 
 Inverted graph with indegrees of each node:
 
-![](Attachments/Pasted%20image%2020220604144148.png)
+![](../GFG/Attachments/Pasted%20image%2020220604144148.png)
 
 So from the graph we can see that `1 and 2 have indegree 0` so we can start `BFS` from that node and `find the maximum depth of graph` which will be our answer.
 
@@ -74,7 +78,7 @@ int minColour(int N, int M, vector<int> mat[]) {
                     }
                 }
             }
-            
+
             ans++;
         }
         return ans;

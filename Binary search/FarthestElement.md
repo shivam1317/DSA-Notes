@@ -1,20 +1,25 @@
 ## problem:
 
->Given an array **Arr[]** of size **N**. For every element in the array, the task is to find the index of the farthest element in the array to the right which is smaller than the current element. If no such number exists then print **-1**.  
- ==Note:== 0 based indexing.
+> Given an array **Arr[]** of size **N**. For every element in the array, the task is to find the index of the farthest element in the array to the right which is smaller than the current element. If no such number exists then print **-1**.  
+>  ==Note:== 0 based indexing.
 
 ## Example:
 
-**Input:** 
+**Input:**
+
 ```
 N=5
 Arr[] = {3, 1, 5, 2, 4}
 ```
+
 **Output:**
+
 ```
 3 -1 4 -1 -1
 ```
+
 **Explanation:**
+
 ```
 Arr[3] is the farthest smallest element to the right of Arr[0].
 Arr[4] is the farthest smallest element to the right of Arr[2].
@@ -23,7 +28,7 @@ And for the rest of the elements, there is no smaller element to their right.
 
 ## Approach:
 
---> First we will find ==prefix Minimum element== For all element i.e we will store the minimum element for all `i` which will represent smallest element after `Arr[i]` on right side
+--> First we will find **prefix Minimum element** For all element i.e we will store the minimum element for all `i` which will represent smallest element after `Arr[i]` on right side
 
 For example we have array:
 
@@ -31,13 +36,14 @@ For example we have array:
 3 1 5 2 4
 ```
 
---> the `prefix_min` array will be 
+--> the `prefix_min` array will be
 
 ```
 1 1 2 2 4
 ```
 
 we will start traversing from right side and then do like this:
+
 ```cpp
 vector<int>prefix_min(N);
 // For last element, the minimum after i will be the last element itself
@@ -92,7 +98,7 @@ vector<int> farNumber(int N,vector<int> Arr){
                     ans = mid;
                     low = mid+1;
                 }else{
-                    high = mid-1;    
+                    high = mid-1;
                 }
             }
             far.push_back(ans);

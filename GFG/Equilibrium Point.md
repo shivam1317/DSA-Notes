@@ -30,7 +30,7 @@ elements after it (2+2).
 
 ## Approach:
 
---> we will first ==find the sum of all elements== and then traverse the array again but this time we will subtract the element from sum and also we will make one more variable `leftSum` which will also find sum of elements in this traversal and ==whenever leftSum becomes equal to prefixSum then the current element in equilibrium point==
+--> we will **first find the sum of all elements** and then traverse the array again but this time we will subtract the element from sum and also we will make one more variable `leftSum` which will also find sum of elements in this traversal and ==whenever leftSum becomes equal to prefixSum then the current element in equilibrium point==
 
 So the process will look like this:
 
@@ -63,4 +63,3 @@ int equilibriumPoint(long long a[], int n) {
         return -1;
    }
 ```
-
