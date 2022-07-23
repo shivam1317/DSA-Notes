@@ -19,7 +19,7 @@ Output
 
 ## Approach:
 
---> So here if we thing greediely and take `50` points at first day then we can't take `100` on second day because as question says ==we can't do same activity on consecutive days== so the max answer will be `55` but the correct answer is `110` which is `10+100` so here we have to try all possible ways which we can do with ==recursion==
+--> So here if we think greediely and take `50` points at first day then we can't take `100` on second day because as question says ==we can't do same activity on consecutive days== so the max answer will be `55` but the correct answer is `110` which is `10+100` so here we have to try all possible ways which we can do with ==recursion==
 
 --> Here in function, we will need 2 things: 1)Current day and 2) The last activity done so that we can avoid doing same activity on consecutive days.
 
