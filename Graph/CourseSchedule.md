@@ -30,7 +30,15 @@ One possible order is [0, 1].
 
 --> Now if we make a graph for this question then it will look like this:
 
-![](../GFG/ttachments/Pasted%20image%2020220523144615.png)
+```
+n = 4, m = 4
+prerequisites = {{1, 0},
+                 {2, 0},
+                 {3, 1},
+                 {3, 2}}
+```
+
+![](../GFG/attachments/Pasted%20image%2020220523144615.png)
 
 So here if we `transpose` the graph then we will get `0` first because we will start with `0` and it can be our ans. So here we just have to find `toposort for directed graph` which we can do using `bfs` and `dfs` but we will do it using `bfs` here.
 
@@ -44,7 +52,7 @@ if count is equal to `n` then we will return our ans else we will return empty a
 vector<vector<int>>make_graph(int n,int m,vector<vector<int>>&prerequisites){
         vector<vector<int>>adj(n);
         for(int i=0;i<m;i++){
-			// Making directed graph
+			// Making directed graph and transpose also
             adj[prerequisites[i][1]].push_back(prerequisites[i][0]);
         }
         return adj;

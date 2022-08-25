@@ -73,3 +73,5 @@ int lenOfLongSubarr(int A[],  int N, int K)
 } 
 ```
 
+#Array #SlidingWindow 
+
