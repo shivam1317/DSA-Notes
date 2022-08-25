@@ -37,8 +37,7 @@ prerequisites = {{1, 0},
                  {3, 1},
                  {3, 2}}
 ```
-
-![](../GFG/attachments/Pasted%20image%2020220523144615.png)
+![](https://github.com/shivam1317/DSA-Notes/blob/main/GFG/Attachments/Pasted%20image%2020220523144615.png?raw=true)
 
 So here if we `transpose` the graph then we will get `0` first because we will start with `0` and it can be our ans. So here we just have to find `toposort for directed graph` which we can do using `bfs` and `dfs` but we will do it using `bfs` here.
 
