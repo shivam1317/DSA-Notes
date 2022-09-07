@@ -28,7 +28,7 @@ Total donuts = 4 + 3 + 2 + 1 = 10 and total time = 12 minutes.
 
 ## Approach:
 
---> Whenever there is a problem saying find minimum of maximum or maximum then it can be solved with `binary search`.
+--> Whenever there is a problem saying find minimum of maximum or maximum of minimum then it can be solved with `binary search`.
 
 So here also we have to `minimise the maximum taken time for each chef` so we will define 2 variables `low and high` and put low as `minimum element of array` and high as any high value like `1000007` and then we will check for every `mid` value if we can get total number of donuts made in `mid` time.
 
