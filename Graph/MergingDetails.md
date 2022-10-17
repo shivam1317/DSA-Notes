@@ -133,4 +133,11 @@ vector<vector<string>> mergeDetails(vector<vector<string>>& details) {
 }
 ```
 
-#unionfind #graph #DSU
+#unionfind #graph #DSU 
+
+>[!tip]
+>This is beautiful!
+>```cpp
+>// You can add code here also
+>cout<<"segs"<<endl;
+>```

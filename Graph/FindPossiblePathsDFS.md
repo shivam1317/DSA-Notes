@@ -2,6 +2,7 @@
 
 >Given a directed acyclic graph(DAG) with n nodes labeled from 0 to n-1. Given edges, s and d ,count the number of ways to reach from s to d.There is a directed Edge from vertex edges[i][0] to the vertex edges[i][1].
 
+
 ## Example:
 
 **Input:** 
