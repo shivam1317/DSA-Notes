@@ -56,3 +56,5 @@ The thief will take 1 plate of coins from the first box and 2 plate of coins fro
         return ans;
     }
 ```
+
+#Array 
