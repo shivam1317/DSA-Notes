@@ -21,7 +21,7 @@ There are 3 zeroes in binary representation of 8. Changing them to 1 will give 1
 
 ## Approach:
 
---> We know that any number which have all bits are `1` will be `(2^i)-1` for example `111 is 15 which is equal to (2^4)-1` so we will take one temp variable and keep adding `2` in it and when it becomes more than N then we will stop and answers to our 2 questions will be:
+--> We know that any number which have all bits are `1` will be `(2^i)-1` for example `111 is 15 which is equal to (2^4)-1` so we will take one temp variable and keep multiplying it with `2` in it and when it becomes more than N then we will stop and answers to our 2 questions will be:
 
 ```
 1. temp-1-N
