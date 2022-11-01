@@ -61,4 +61,3 @@ vector<int> searchRange(vector<int> &arr, int key) {
 	return ans;
 }
 ```
-
