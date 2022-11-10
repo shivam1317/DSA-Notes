@@ -19,7 +19,7 @@ If ‘ARR’ is {1,2,3,4} and ‘K’ = 4, then there exists 2 subsets with sum 
 1. If target becomes 0
 2. If index becomes 0
 
-If index becomes 0 then we only have one value which is `arr[i]` and if that value is equal to `arr[i]` then we will return true otherwise we will return false.
+If index becomes 0 then we only have one value which is `arr[i]` and if that value is equal to `target` then we will return true otherwise we will return false.
 
 Code will look like this:
 
