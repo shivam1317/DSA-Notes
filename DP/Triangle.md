@@ -25,7 +25,7 @@ So we will find all possible paths and take their minimum sum. And all possibili
 
 ### But can we start from (n-1,m-1)?
 
---> we can't start because in the matrix questions we knew that we have to reacth the end of the matrix and the destination was fixed. but here we don't have fixed destination which we can see in diagram:
+--> we can't start because in the matrix questions we knew that we have to reach the end of the matrix and the destination was fixed. but here we don't have fixed destination which we can see in diagram:
 
 ![](./Attachments/Pastedimage20220521154756.png)
 

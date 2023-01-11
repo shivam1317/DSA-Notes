@@ -139,3 +139,5 @@ int solve(int target,vector<int>&arr){
 	return prev[target];
 }
 ```
+
+#dp #greedy 

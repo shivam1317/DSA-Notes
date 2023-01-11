@@ -23,7 +23,7 @@ Stepping no's are 0 1 2 3 4 5
 
 --> Now we know that the max stepping number will be `<=m` and also we know that we are just concerned about digits here. so we will run a loop from `1 to 9` and for each digit we will try to append some digits such that the absolute difference will be 1.
 
---> So for example, if we have digit `2` then we can only append `3` or `1` to it to make difference 1. and this logic will be valid for every numbers from `1 to 8` except `0 and 9` because we can't append `(0-1)` to any number and also we can't append `(9+1)` to any digit so we will also handle these edge cases.
+--> So for example, if we have digit `2` then we can only append `3` or `1` to it to make difference 1. and this logic will be valid for every numbers from `1 to 8` except `0 and 9` because we can't append `(0+(-1))` to any number and also we can't append `(9+1)` to any digit so we will also handle these edge cases.
 
 So basically, we will keep appending such digits to current number and once that number becomes greater than `m`, we will return. also we will maintain one `count` variable to store our final ans.
 

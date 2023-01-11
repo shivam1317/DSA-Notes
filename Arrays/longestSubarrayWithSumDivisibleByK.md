@@ -76,3 +76,5 @@ int longSubarrWthSumDivByK(int arr[], int n, int k)
 	    return ans;
 	}
 ```
+
+#remainder #map 

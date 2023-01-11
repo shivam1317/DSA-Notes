@@ -66,6 +66,3 @@ int minNumber(int arr[], int low, int high)
         }
     }
 ```
-
-
-
